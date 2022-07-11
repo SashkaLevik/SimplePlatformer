@@ -10,7 +10,7 @@ public class CoinCount : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "Coin")
+        if (collision.TryGetComponent<Coin>(out Coin coin))
         {
             _coins++;
             _coinsText.text = _coins.ToString();

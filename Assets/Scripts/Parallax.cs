@@ -4,22 +4,21 @@ using UnityEngine;
 
 public class Parallax : MonoBehaviour
 {
-    //[SerializeField] private Vector2 parallaxEffectMultiplier;
-    [SerializeField] private Vector2 parallaxEffectMultiplier;
+    [SerializeField] private Vector2 _parallaxEffectMultiplier;
 
-    private Transform cameraTransform;
-    private Vector3 lastCameraPosition;
+    private Transform _cameraTransform;
+    private Vector3 _lastCameraPosition;
 
     private void Start()
     {
-        cameraTransform = Camera.main.transform;
-        lastCameraPosition = cameraTransform.position;
+        _cameraTransform = Camera.main.transform;
+        _lastCameraPosition = _cameraTransform.position;
     }
 
     private void LateUpdate()
     {
-        Vector3 deltaMovement = cameraTransform.position - lastCameraPosition;
-        transform.position += new Vector3(deltaMovement.x * parallaxEffectMultiplier.x, deltaMovement.y * parallaxEffectMultiplier.y);
-        lastCameraPosition = cameraTransform.position;
+        Vector3 deltaMovement = _cameraTransform.position - _lastCameraPosition;
+        transform.position += new Vector3(deltaMovement.x * _parallaxEffectMultiplier.x, deltaMovement.y * _parallaxEffectMultiplier.y);
+        _lastCameraPosition = _cameraTransform.position;
     }
 }

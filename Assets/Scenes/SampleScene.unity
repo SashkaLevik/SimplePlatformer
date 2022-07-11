@@ -146,7 +146,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 42412336}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 1.9845216}
+  m_LocalPosition: {x: 0, y: 0, z: 2.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 793042543}
@@ -166,7 +166,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 057d0465191cb2340a069f19f344417d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  parallaxEffectMultiplier: {x: 0, y: 0}
+  _parallaxEffectMultiplier: {x: 0, y: 0}
 --- !u!1 &121863710
 GameObject:
   m_ObjectHideFlags: 0
@@ -179,6 +179,7 @@ GameObject:
   - component: {fileID: 121863713}
   - component: {fileID: 121863712}
   - component: {fileID: 121863711}
+  - component: {fileID: 121863715}
   m_Layer: 0
   m_Name: Coin (1)
   m_TagString: Coin
@@ -286,6 +287,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &121863715
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 121863710}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f381b47c25ecc61408fc92a60a052549, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &149590795
 GameObject:
   m_ObjectHideFlags: 0
@@ -663,7 +676,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 057d0465191cb2340a069f19f344417d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  parallaxEffectMultiplier: {x: -0.5, y: 0}
+  _parallaxEffectMultiplier: {x: -0.5, y: 0}
 --- !u!1 &358464938
 GameObject:
   m_ObjectHideFlags: 0
@@ -709,7 +722,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 057d0465191cb2340a069f19f344417d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  parallaxEffectMultiplier: {x: 0.4, y: 0}
+  _parallaxEffectMultiplier: {x: 0.3, y: 0}
 --- !u!1 &384754114
 GameObject:
   m_ObjectHideFlags: 0
@@ -973,6 +986,7 @@ GameObject:
   - component: {fileID: 430298649}
   - component: {fileID: 430298648}
   - component: {fileID: 430298647}
+  - component: {fileID: 430298651}
   m_Layer: 0
   m_Name: Coin (2)
   m_TagString: Coin
@@ -1080,6 +1094,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &430298651
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 430298646}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f381b47c25ecc61408fc92a60a052549, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &480821998
 GameObject:
   m_ObjectHideFlags: 0
@@ -1695,7 +1721,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 823684883}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 6.068442, y: 0.7294008, z: 1.9845216}
+  m_LocalPosition: {x: 6.068442, y: 0.7294008, z: 2.4}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1908722796}
@@ -1715,7 +1741,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 057d0465191cb2340a069f19f344417d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  parallaxEffectMultiplier: {x: 0.1, y: 0}
+  _parallaxEffectMultiplier: {x: 0.1, y: 0}
 --- !u!1 &1004296849
 GameObject:
   m_ObjectHideFlags: 0
@@ -1728,6 +1754,7 @@ GameObject:
   - component: {fileID: 1004296851}
   - component: {fileID: 1004296850}
   - component: {fileID: 1004296853}
+  - component: {fileID: 1004296854}
   m_Layer: 0
   m_Name: Coin
   m_TagString: Coin
@@ -1835,6 +1862,18 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0.13550659}
   serializedVersion: 2
   m_Radius: 9.444057
+--- !u!114 &1004296854
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1004296849}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f381b47c25ecc61408fc92a60a052549, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1029657683
 GameObject:
   m_ObjectHideFlags: 0
@@ -2199,7 +2238,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1575968765}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 6.068442, y: 0.7294008, z: 1.9845216}
+  m_LocalPosition: {x: 6.068442, y: 0.7294008, z: 2.3}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 187708654}
@@ -2219,7 +2258,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 057d0465191cb2340a069f19f344417d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  parallaxEffectMultiplier: {x: 0.2, y: 0}
+  _parallaxEffectMultiplier: {x: 0.2, y: 0}
 --- !u!1 &1617503033
 GameObject:
   m_ObjectHideFlags: 0
@@ -2759,6 +2798,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1980105775238940940, guid: 5d4e6b6805f64924c89c46960b52496c,
+        type: 3}
+      propertyPath: _coinsText
+      value: 
+      objectReference: {fileID: 480822001}
     - target: {fileID: 2449855774823730656, guid: 5d4e6b6805f64924c89c46960b52496c,
         type: 3}
       propertyPath: m_Name
@@ -2819,10 +2863,5 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6513461807296806253, guid: 5d4e6b6805f64924c89c46960b52496c,
-        type: 3}
-      propertyPath: _coinsText
-      value: 
-      objectReference: {fileID: 480822001}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5d4e6b6805f64924c89c46960b52496c, type: 3}

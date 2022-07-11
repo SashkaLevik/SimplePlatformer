@@ -14,8 +14,10 @@ public class Player : MonoBehaviour
     private Animator _animator;
     private Vector2 _moveVector;
     private float _currentSpeed;
-    public bool _isFacingRight = true;
-    public bool _isGrounded;
+    private bool _isFacingRight = true;
+    private bool _isGrounded;
+    private const string OnGround = "onGround";
+    private const string IsRun = "isRun";
 
     private void Start()
     {
@@ -26,16 +28,16 @@ public class Player : MonoBehaviour
 
     private void Update()
     {
-        CheckingGround();
+        DefineGround();
         Move();
         Reflect();
         Jump();
     }
 
-    private void CheckingGround()
+    private void DefineGround()
     {
         _isGrounded = Physics2D.OverlapCircle(_groundCheck.position, _checkRadius, _ground);
-        _animator.SetBool("onGround", true);
+        _animator.SetBool(OnGround, true);
     }
 
     private void Move()
@@ -46,11 +48,11 @@ public class Player : MonoBehaviour
         if (_moveVector.x > 0 || _moveVector.x < 0)
         {
             _currentSpeed = _speed;
-            _animator.SetBool("isRun", true);
+            _animator.SetBool(IsRun, true);
         }
         else
         {
-            _animator.SetBool("isRun", false);
+            _animator.SetBool(IsRun, false);
         }
     }
 
@@ -59,13 +61,13 @@ public class Player : MonoBehaviour
         if (_isGrounded && Input.GetKeyDown(KeyCode.Space))
         {
             _rigidbody.velocity = Vector2.up * _jumpForce;
-            _animator.SetBool("onGround", false);
+            _animator.SetBool(OnGround, false);
         }        
     }
 
     private void Reflect()
     {
-        if ((_moveVector.x < 0 && !_isFacingRight) || (_moveVector.x > 0 && _isFacingRight))
+        if ((_moveVector.x < 0 && _isFacingRight) || (_moveVector.x > 0 && !_isFacingRight))
         {
             transform.localScale *= new Vector2(-1, 1);
             _isFacingRight = !_isFacingRight;

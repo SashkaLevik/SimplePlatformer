@@ -61,7 +61,7 @@ GameObject:
   - component: {fileID: 2449855774823730670}
   - component: {fileID: 2449855774823730671}
   - component: {fileID: 2449855774823730668}
-  - component: {fileID: 6513461807296806253}
+  - component: {fileID: 1980105775238940940}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -222,7 +222,7 @@ MonoBehaviour:
     m_Bits: 256
   _isFacingRight: 0
   _isGrounded: 0
---- !u!114 &6513461807296806253
+--- !u!114 &1980105775238940940
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
