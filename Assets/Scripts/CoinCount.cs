@@ -6,6 +6,7 @@ using TMPro;
 public class CoinCount : MonoBehaviour
 {
     [SerializeField] private TMP_Text _coinsText;
+
     private float _coins = 0;
 
     private void OnTriggerEnter2D(Collider2D collision)

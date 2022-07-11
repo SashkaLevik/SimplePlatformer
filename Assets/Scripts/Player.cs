@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(Rigidbody2D))]
+[RequireComponent(typeof(Animator))]
 public class Player : MonoBehaviour
 {
     [SerializeField] private float _speed;
@@ -13,9 +15,12 @@ public class Player : MonoBehaviour
     private Rigidbody2D _rigidbody;
     private Animator _animator;
     private Vector2 _moveVector;
+
     private float _currentSpeed;
+
     private bool _isFacingRight = true;
     private bool _isGrounded;
+
     private const string OnGround = "onGround";
     private const string IsRun = "isRun";
 
