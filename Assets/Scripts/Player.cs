@@ -17,6 +17,7 @@ public class Player : MonoBehaviour
     private Vector2 _moveVector;
 
     private float _currentSpeed;
+    private float _initialVectorValue = 0;
 
     private bool _isFacingRight = true;
     private bool _isGrounded;
@@ -50,7 +51,7 @@ public class Player : MonoBehaviour
         _moveVector.x = Input.GetAxis("Horizontal");
         _rigidbody.velocity = new Vector2(_moveVector.x * _speed, _rigidbody.velocity.y);
 
-        if (_moveVector.x > 0 || _moveVector.x < 0)
+        if (_moveVector.x > _initialVectorValue || _moveVector.x < _initialVectorValue)
         {
             _currentSpeed = _speed;
             _animator.SetBool(IsRun, true);

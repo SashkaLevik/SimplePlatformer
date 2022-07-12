@@ -12,7 +12,11 @@ public class Monster : MonoBehaviour
 
     private Vector2 _monsterScale;
 
+    private int _turnRight = 1;
+    private int _turnLeft = -1;
     private int _distance;
+    private int _minDistance = 0;
+    private int _maxDistance = 1;
     private float _distanceToPoint = 0.2f;
 
     private void Awake()
@@ -42,15 +46,15 @@ public class Monster : MonoBehaviour
     
     private void ChangeDirection()
     {
-        if (_distance > 0)
+        if (_distance > _minDistance)
         {
-            _distance = 0;
-            FaceDirection(1);
+            _distance = _minDistance;
+            FaceDirection(_turnRight);
         }
         else
         {
-            _distance = 1;
-            FaceDirection(-1);
+            _distance = _maxDistance;
+            FaceDirection(_turnLeft);
         }
     }
 }
